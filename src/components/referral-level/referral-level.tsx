@@ -25,6 +25,6 @@ export class ReferralLevel {
   }
 
   render() {
-    return <div>{this.getLevelName(this.referralCount)}</div>;
+    return <div>lalala {this.getLevelName(this.referralCount)}</div>;
   }
 }

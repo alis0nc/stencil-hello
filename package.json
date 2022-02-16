@@ -1,6 +1,6 @@
 {
-  "name": "stencil-hello",
-  "version": "0.0.1",
+  "name": "@alisonc/stencil-hello",
+  "version": "0.0.3",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
