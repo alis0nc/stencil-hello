@@ -20,6 +20,12 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface ReferralLevel {
+        /**
+          * Referral level
+         */
+        "referralCount": number;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +34,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLReferralLevelElement extends Components.ReferralLevel, HTMLStencilElement {
+    }
+    var HTMLReferralLevelElement: {
+        prototype: HTMLReferralLevelElement;
+        new (): HTMLReferralLevelElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "referral-level": HTMLReferralLevelElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +60,15 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface ReferralLevel {
+        /**
+          * Referral level
+         */
+        "referralCount"?: number;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "referral-level": ReferralLevel;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +76,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "referral-level": LocalJSX.ReferralLevel & JSXBase.HTMLAttributes<HTMLReferralLevelElement>;
         }
     }
 }
